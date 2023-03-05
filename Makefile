@@ -8,6 +8,9 @@ CFLAGS = -g -Wall -Wextra -Wshadow
 .PHONY: all
 all: $(NAME)
 
+.PHONY: re
+re: fclean all
+
 .PHONY: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
